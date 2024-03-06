@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+  },
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "paths": {
+      "@controllers": ["src/api/v1/controllers"],
+      "@helpers": ["src//api/v1/helpers"],
+      "@interfaces": ["src/api/v1/interfaces"],
+      "@middlewares": ["src/api/v1/middlewares"],
+      "@models": ["src/api/v1/models"],
+      "@routes": ["src/api/v1/routes"],
+      "@validations": ["src/api/v1/validations"],
+      "@config": ["src/config"]
+    }
+  },
+  "lib": ["es2015"]
+}
